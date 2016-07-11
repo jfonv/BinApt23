@@ -1,0 +1,57 @@
+[
+  {
+      "_id": { "$oid": "5783e20754b4f0f9cc9788cc" },
+      "name" : "a1",
+      "sqft" : 1300,
+      "bedrooms" : 3,
+      "floor" : 1,
+      "rent" : 2500,
+      "collectedRent" : 0,
+      "renter" : {},
+      "dateCreated": { "$date": "2016-06-30T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e20754b4f0f9cc9788cd" },
+      "name" : "a1",
+      "sqft" : 2500,
+      "bedrooms" : 3,
+      "floor" : 1,
+      "rent" : 2500,
+      "collectedRent" : 0,
+      "renter" : {},
+      "dateCreated": { "$date": "2016-06-25T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e20754b4f0f9cc9788cf" },
+      "name" : "a1",
+      "sqft" : 1800,
+      "bedrooms" : 3,
+      "floor" : 1,
+      "rent" : 2500,
+      "collectedRent" : 0,
+      "renter" : {},
+      "dateCreated": { "$date": "2016-06-05T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e20754b4f0f9cc9788d0" },
+      "name" : "a1",
+      "sqft" : 1274,
+      "bedrooms" : 3,
+      "floor" : 1,
+      "rent" : 2500,
+      "collectedRent" : 0,
+      "renter" : {},
+      "dateCreated": { "$date": "2016-06-03T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e20754b4f0f9cc9788d1" },
+      "name" : "a1",
+      "sqft" : 600,
+      "bedrooms" : 3,
+      "floor" : 1,
+      "rent" : 2500,
+      "collectedRent" : 0,
+      "renter" : {},
+      "dateCreated": { "$date": "2016-06-18T00:00:00.000Z" }
+  }
+]

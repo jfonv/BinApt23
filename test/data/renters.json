@@ -1,0 +1,37 @@
+[
+  {
+      "_id": { "$oid": "5783e34564b4f0f9cc9788cc" },
+      "name" : "Rob",
+      "money" : 14000,
+      "apartment" : {},
+      "dateCreated": { "$date": "2016-06-30T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e34564b4f0f9cc9788cd" },
+      "name" : "MJ",
+      "money" : 12000,
+      "apartment" : {},
+      "dateCreated": { "$date": "2016-06-25T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e34564b4f0f9cc9788cf" },
+      "name" : "Joe",
+      "money" : 24000,
+      "apartment" : {},
+      "dateCreated": { "$date": "2016-06-05T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e34564b4f0f9cc9788d0" },
+      "name" : "Tony",
+      "rent" : 25000,
+      "apartment" : {},
+      "dateCreated": { "$date": "2016-06-03T00:00:00.000Z" }
+  },
+  {
+      "_id": { "$oid": "5783e34564b4f0f9cc9788d1" },
+      "name" : "James",
+      "money" : 6000,
+      "apartment" : {},
+      "dateCreated": { "$date": "2016-06-18T00:00:00.000Z" }
+  }
+]
