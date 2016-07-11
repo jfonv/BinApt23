@@ -1,0 +1,13 @@
+{
+  "name": "binapt23",
+  "version": "1.0.3",
+  "scripts": {
+    "dev": "DB=dev-binapt23 LEVEL=silly PORT=3333 nodemon dst/server.js"
+  },
+  "author": "tm +  jf",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
