@@ -15,7 +15,7 @@ schema.methods.payRent = function (cb) {
   console.log('apartment: ', Apartment);
   console.log('look here mom:', this);
 
-  Apartment.findById(this.apartment, (err, apartment) => {
+  this.model('Apartment').findById(this.apartment, (err, apartment) => {
     console.log('apartment: ', apartment);
     cb();
   });
