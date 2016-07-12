@@ -2,7 +2,7 @@
 /* eslint-disable func-names, consistent-return */
 
 import mongoose from 'mongoose';
-const Renter = require('./renter');
+// const Renter = require('./renter');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
@@ -17,13 +17,16 @@ const schema = new Schema({
 });
 
 schema.methods.lease = function (renterId, cb) {
-  Renter.findById(renterId, (err, renter) => {
+  this.model('Renter').findById(renterId, (err, renter) => {
+    console.log('line 21:', renter);
     if (this.rent > renter.money) {
-      cb();
+      return cb();
     }
-    renter.apartment = this._id;  // this: apartment
+
+    renter.apartment = this;  // this: apartment
     this.renter = renter._id;
     this.save(() => {
+      renter.apartment = this;
       renter.payRent(cb);
     });
   });

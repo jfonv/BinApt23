@@ -1,7 +1,8 @@
-/* eslint-disable func-names, no-console */
+/* eslint-disable func-names, no-console,
+   consistent-return, arrow-body-style, no-underscore-dangle */
 
 import mongoose from 'mongoose';
-const Apartment = require('./apartment');
+// const Apartment = require('./apartment');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
@@ -12,24 +13,34 @@ const schema = new Schema({
 });
 
 schema.methods.payRent = function (cb) {
-  console.log('apartment: ', Apartment);
-  console.log('look here mom:', this);
+  // console.log('this line 15:', this);
+  // console.log('apartment:', this.apartment);
 
-  this.model('Apartment').findById(this.apartment, (err, apartment) => {
-    console.log('apartment: ', apartment);
-    cb();
+  if (this.money < this.apartment.rent) {
+    return cb();
+  }
+
+  this.money -= this.apartment.rent;
+  this.apartment.collectedRent += this.apartment.rent;
+
+  const apt = this.apartment;
+  const renter = this;
+  // console.log('this:', this);
+  // console.log('apartment:', this.apartment);
+  // apartment.save(() => {
+  apt.save(() => {
+    // console.log('this is (ln29):', this);
+    console.log('this (apt ln 33):', this);
+    renter.apartment = apt._id;
+    console.log('renter (apt ln 35):', renter);
+    renter.save((err, renter2) => {
+    // console.log('this is (ln31):', this);
+      console.log('renter (apt ln 38):', err.message);
+      console.log('renter (apt ln 39):', renter2);
+      return cb();
+    });
   });
-          //  .exec((err, apartment) => {
-          //    if (this.money > this.apartment.rent) return cb();
-          //    this.money -= apartment.rent;
-          //    apartment.collectedRent += apartment.rent;
-           //
-          //    apartment.save(() => {
-          //      this.save(() => {
-          //        cb();
-          //      });
-          //    });
-          //  });
+  // });
 };
 
 
